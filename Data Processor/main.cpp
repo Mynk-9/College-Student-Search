@@ -1,3 +1,5 @@
+/* Copyright (c) 2019 Mayank Mathur under MIT License */
+
 #include <iostream>
 #include <fstream>
 #include <vector>
