@@ -1,3 +1,5 @@
+/* Copyright (c) 2019 Mayank Mathur under MIT License */
+
 #ifndef STUDSRCHQURY
 
 	#define ATTRIBUTES 8
