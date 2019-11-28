@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Results</title>
+		<script src="result.js"></script>
+		<style>
+			body {
+				//height: 70vw;
+				font-family: sans;
+			}
+			table {
+				width: 100%;
+				//background-color: #eee;
+				border-style: solid;
+				border-color: #000;
+				border-collapse: collapse;
+			}
+			tr {
+				transition: background-color 1s;
+			}
+			tr:nth-child(even) {
+				background-color: #f2f2f2;
+			}
+			td {
+				//padding: 1em;
+				width: 50%;
+				border: 0.5px solid #a0a0a0;
+			}
+			td:first-child {
+				text-align: left;
+				font-weight: bold;
+			}
+			tr:hover {
+				background-color: #a0a0a0;
+			}
+			img {
+				border-radius: 50%;
+				height: auto;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+			/*tr.last {
+				border-bottom-style: solid;
+				border-bottom-color: #000;
+				border-bottom-width: medium;
+			}*/
+		</style>
+		<script>
+			function loadData() {
+				var data = JSON.parse(query_results).qresults;
+				
+				for (i = 0; i < data.length; i++) {
+					var table = document.createElement("table");
+					
+					var row0 = table.insertRow(-1);
+					var cell00 = row0.insertCell(0);
+					cell00.innerHTML = "Name: ";
+					var cell01 = row0.insertCell(1);
+					cell01.innerHTML = data[i].N;
+					
+					var row1 = table.insertRow(-1);
+					var cell10 = row1.insertCell(0);
+					cell10.innerHTML = "ID No.: ";
+					var cell11 = row1.insertCell(1);
+					cell11.innerHTML = data[i].ID;
+					
+					var row2 = table.insertRow(-1);
+					var cell20 = row2.insertCell(0);
+					cell20.innerHTML = "Hostel/PS/Graduate: ";
+					var cell21 = row2.insertCell(1);
+					cell21.innerHTML = data[i].H;
+					
+					var row3 = table.insertRow(-1);
+					var cell30 = row3.insertCell(0)
+					cell30.innerHTML = "Room Number/PS Company: ";
+					var cell31 = row3.insertCell(1);
+					cell31.innerHTML = data[i].R;
+					
+					var row4 = table.insertRow(-1);
+					var cell40 = row4.insertCell(0);
+					cell40.innerHTML = "Social Media Data: ";
+					var cell41 = row4.insertCell(1);
+					cell41.innerHTML = data[i].SM;
+					
+					var row5 = table.insertRow(-1);
+					var cell50 = row5.insertCell(0);
+					cell50.innerHTML = "Image: ";
+					var cell51 = row5.insertCell(1);
+					var image = document.createElement("img");
+					image.src = "Images Database\\" + data[i].ID.substring(0, 12) + ".jpg";
+					cell51.appendChild(image);
+					
+					document.body.appendChild(table);
+				}
+			}
+		</script>
+	<head>
+	
+	<body onload="loadData()">
+		<h1 align=center>Results</h1>
+		<!-- <table id="result-table">
+			<tr>
+				<td>Name:</td>
+				<td>!!NAME!!</td>
+			</tr>
+			<tr>
+				<td>ID No.:</td>
+				<td>!!ID!!</td>
+			</tr>
+			<tr>
+				<td>Hostel/PS/Graduate:</td>
+				<td>!!HOSTEL!!</td>
+			</tr>
+			<tr>
+				<td>Room Number/PS Company:</td>
+				<td>!!ROOM!!</td>
+			</tr>
+			<tr>
+				<td>Social Media Data:</td>
+				<td>!!SMDATA!!</td>
+			</tr>
+			<tr class="last">
+				<td>Image:</td>
+				<td>
+					<img src="d:\abc.jpg"></img>
+				</td>
+			</tr>
+		</table> -->
+	</body>
+</html>
