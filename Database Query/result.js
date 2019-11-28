@@ -1,1 +1,1 @@
-var query_results = '{ "qresults": []}';
+var query_results = '{ "qresults": [{}]}';
