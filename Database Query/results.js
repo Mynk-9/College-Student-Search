@@ -1,3 +1,5 @@
+/* Copyright (c) 2019 Mayank Mathur under MIT License */
+
 function loadData() {
 	var data = JSON.parse(query_results).qresults;
 	var div = document.getElementsByClassName('result-stats')[0];
