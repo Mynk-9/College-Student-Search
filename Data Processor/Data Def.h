@@ -1,3 +1,5 @@
+/* Copyright (c) 2019 Mayank Mathur under MIT License */
+
 #ifndef STUDSRCHQURY
 
 	#define ATTRIBUTES 8
@@ -10,9 +12,7 @@
 	#define ROOM 5
 	#define DATASM 6
 	#define DATAIMG 7
-	
-#else
-	
+
 	#define STUDSRCHQURY
 	
 #endif
