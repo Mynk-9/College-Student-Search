@@ -12,9 +12,5 @@
 	#define DATAIMG 7
 	
 	#define STUDSRCHQURY
-	
-#else
-	
-	#define STUDSRCHQURY
-	
+
 #endif
